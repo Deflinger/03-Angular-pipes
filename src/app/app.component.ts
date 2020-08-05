@@ -8,13 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   nombre:string = 'Capitan America';
+  nombre2: string = 'ceSaR aleJanDro';
   arreglo= [1,2,3,4,5,6,7,8,9,10];
   PI: number = Math.PI
   porcentaje: number = 0.234;
   salario: number = 1234.5;
   fecha:Date= new Date();
+  activate: boolean = true;
 
   idioma: string = 'fr';
+
+  videoUrl: string = "https://www.youtube.com/embed/bgo9dJB_icw";
 
   idioma1: string = '';
 

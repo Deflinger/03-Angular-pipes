@@ -23,6 +23,11 @@
                     <td>LowerCase</td>
                     <td>{{nombre | lowercase}}</td>
                 </tr>
+                <tr>
+                    <td>{{nombre2}}</td>
+                    <td>capitalizado </td>
+                    <td>{{nombre2 | capitalizado:true}}</td>
+                </tr>
 
                 <tr>
                     <td>{{nombre}}</td>
@@ -114,6 +119,17 @@
                     </td>
                     <td>{{fecha | date:'MMMM - dd':'':idioma1}}</td>
                 </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>
+                        Contrasena
+                        <br>
+                        <button (click)="activate = !activate " class="btn btn-outline-primary">
+                            Activar/Desactivar
+                        </button>
+                    </td>
+                    <td>{{nombre | activar:activate}}</td>
+                </tr>
 
             </tbody>
         </table>
@@ -130,5 +146,14 @@
                 {{heroe| json}}
             </pre>
         </div>
+
+    </div>
+</div>
+
+<h3 class="mt-4">Domseguro</h3>
+<hr>
+<div class="row mb-5">
+    <div class="col">
+        <iframe width="560" height="315" [src]="videoUrl | domseguro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
