@@ -74,11 +74,61 @@
                     <td>currency:'CAD ':'symbol-narrow':'.0-0' </td>
                     <td>{{salario | currency:'CAD$ ':'symbol':'.0-0'}}</td>
                 </tr>
+                <tr>
+                    <td>{{valorPromesa}}</td>
+                    <td>async </td>
+                    <td>{{valorPromesa | async}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date </td>
+                    <td>{{fecha | date}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date </td>
+                    <td>{{fecha | date:'medium'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date </td>
+                    <td>{{fecha | date:'short'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'MMMM - dd' </td>
+                    <td>{{fecha | date:'MMMM - dd'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'MMMM - dd':'':{{idioma}} </td>
+                    <td>{{fecha | date:'MMMM - dd':'':idioma}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'MMMM - dd'
+                        <br>
+                        <button (click)="verFecha('es')" class=" mr-1 btn btn-primary">Español</button>
+                        <button (click)="verFecha('en')" class=" mr-1 btn btn-secondary">Inglés</button>
+                        <button (click)="verFecha('fr')" class=" mr-1 btn btn-success">Francés</button>
+                    </td>
+                    <td>{{fecha | date:'MMMM - dd':'':idioma1}}</td>
+                </tr>
+
             </tbody>
         </table>
         <h4>Slice <small> slice:5:20</small></h4>
         <ul>
             <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
         </ul>
+
+
+        <h3>JSON</h3>
+        <hr>
+        <div class="row mb4">
+            <pre class="col">
+                {{heroe| json}}
+            </pre>
+        </div>
     </div>
 </div>
